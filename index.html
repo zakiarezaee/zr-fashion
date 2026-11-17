@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ZR fashion</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fcf4ff;
+        text-align: center;
+      }
+      h1 {
+        color: #a34d71;
+      }
+      button {
+        background-color: #a34d71;
+        color: aqua;
+        padding: 10px;
+        border: 0;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ZR fashion</h1>
+    <p>Beautiful outfits for every occasion</p>
+    <h2>our Collection</h2>
+    <h3>golden yellow outfits-$70</h3>
+    <button onclick="addToCart(70)">Add to Cart</button>
+    <h3>whit and burnd orange with multicolor embroidery-$180.99</h3>
+    <button onclick="addToCart(180.99)">Add to Cart</button>
+    <h2>shopping cart</h2>
+    <p>items:<span id="count">0</span></p>
+    <p>total:$<span id="total">0.00</span></p>
+    <script>
+      let count = 0;
+      let total = 0;
+      function addToCart(price) {
+        count = count + 1;
+        total = total + price;
+        document.getElementById("count").textContent = count;
+        document.getElementById("total").textContent = total.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
